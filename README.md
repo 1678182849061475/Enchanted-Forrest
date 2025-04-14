@@ -1,5 +1,5 @@
 md
-# Enchanted Forest Exploration Game
+# Enchanted Forest Exploration Game by Veronika N. Štefanec
 
 ## Overview
 
