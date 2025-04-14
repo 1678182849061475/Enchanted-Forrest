@@ -1,0 +1,12 @@
+*   **Project Structure:** The code is organized into logical directories such as `app`, `src`, `public`, and `scripts`. The `app` directory contains Next.js route handlers, the `src` directory contains reusable components, hooks, and utility functions, and the `public` directory contains static assets.
+*   **Dependencies:** The `package.json` file lists all required dependencies, including `three`, `@react-three/fiber`, `@react-three/drei`, `zustand`, and others. Make sure to install them using `pnpm install`.
+*   **Environment Variables:** The `.env.local` file is used to store sensitive information such as API keys and file paths. Make sure to create this file and populate it with the correct values.
+*   **3D Environment:** The `Environment.tsx` component loads and renders the 3D environment. It uses `OBJLoader`, `MTLLoader`, and `TextureLoader` to load the model, materials, and textures.
+*   **Character Controller:** The `CharacterController.tsx` component handles character movement and interactions based on user input. It uses the `useKeyboard` hook to track keyboard input.
+*   **AI-Driven Birds:** The `GeminiBird.tsx` component implements the AI-driven bird characters. It uses the Gemini API to generate speech for the birds.
+*   **Image Pop-Ups:** The `ImagePopups.tsx` component controls the appearance of images in the forest air, along with their accompanying sounds. It uses `useTexture` and `useAudio` hooks from `@react-three/drei` to load and manage the images and sounds.
+*   **User Interface:** The `UserInterface.tsx` component implements graphical components for the user interface like the main menu.
+*   **Utility Functions:** The `src/lib` directory contains utility functions for various tasks, such as interacting with the Gemini API, playing audio files, and loading assets.
+*   **State Management:** The `zustand` library is used to manage the application's state, such as the paths to the music and image files.
+*   **Keyboard Hook:** The `useKeyboard` hook tracks keyboard input and controls character movement.
+*   **Next.js Configuration:** The `next.config.js` file configures Next.js, including settings for environment variables, webpack, and other Next.js features.
