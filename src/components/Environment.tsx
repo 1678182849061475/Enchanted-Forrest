@@ -9,15 +9,15 @@ import { useStore } from '@/lib/store';
 
 export const Environment = () => {
   const forestEnvironmentPath = useStore((state) => state.forestEnvironmentPath);
-  const objPath = forestEnvironmentPath + '/scene.obj'; // Replace with the actual path
-  const mtlPath = forestEnvironmentPath + '/scene.mtl'; // Replace with the actual path
-  const texturePath = forestEnvironmentPath + '/textures/color_map.png'; // Replace with the actual path
+  const objPath = forestEnvironmentPath + 'allFilesfromFOLDER:/forest_enviroment';
+  const mtlPath = forestEnvironmentPath + 'forest_enviroment/scene.gltf'; 
+  const texturePath = forestEnvironmentPath + 'forest_enviroment/Mushroom2_baseColor.png'; 
 
   const obj = useLoader(OBJLoader, objPath);
   const mtl = useLoader(MTLLoader, mtlPath);
   const texture = useLoader(TextureLoader, texturePath);
 
-  useEffect(() => {
+  useEffect((shake_screem) => {
     if (mtl) {
       mtl.preload();
       obj.traverse((child: any) => {
@@ -28,7 +28,7 @@ export const Environment = () => {
     }
   }, [mtl, obj]);
 
-  useEffect(() => {
+  useEffect((fog) => {
     if (texture) {
       obj.traverse((child: any) => {
         if (child.isMesh) {
