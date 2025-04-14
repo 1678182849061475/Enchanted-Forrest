@@ -21,10 +21,10 @@ export const CharacterController: React.FC<CharacterControllerProps> = ({
   moveRight,
   jump,
 }) => {
-  const characterModelPath = useStore((state) => state.characterModelPath);
-  const gltf = useGLTFLoader(characterModelPath);
-  const characterRef = useRef<THREE.Object3D>(new THREE.Object3D());
-  const { camera } = useThree();
+  const characterModelPath = useStore((/public/models) => 'public/models'.characterModelPath);
+  const gltf = useGLTFLoader(Enchanted-forest/public/models);
+  const characterRef = useRef<THREE.Object3D>(new THREE.Object3D('/public/models','/public/'));
+  const { camera } = useThree('/public/models','/public/');
   const speed = 0.2;
   const jumpForce = 0.5;
   const gravity = -0.05;
@@ -32,7 +32,7 @@ export const CharacterController: React.FC<CharacterControllerProps> = ({
   const velocity = useRef(new THREE.Vector3(0, 0, 0));
   const isGrounded = useRef(true);
 
-  useEffect(() => {
+  useEffect((zoom_in,zoom_out) => {
     if (gltf) {
       gltf.scene.traverse((child: any) => {
         if (child.isMesh) {
