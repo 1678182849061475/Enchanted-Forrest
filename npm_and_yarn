@@ -1,0 +1,42 @@
+Bumps the npm_and_yarn group with 1 update in the / directory: next.
+
+Updates next from 14.1.0 to 14.2.26
+Release notes
+
+Sourced from next's releases.
+
+    v14.2.26
+
+        [!NOTE]
+        This release is backporting bug fixes. It does not include all pending features/changes on canary.
+
+    Core Changes
+
+        Match subrequest handling for edge and node (#77476)
+
+    v14.2.25
+
+        [!NOTE]
+        This release is backporting bug fixes. It does not include all pending features/changes on canary. This release contains a security patch for CVE-2025-29927.
+
+    Core Changes
+
+        Update middleware request header (#77202)
+
+    Credits
+
+    Huge thanks to @​ijjk for helping!
+
+Commits
+
+    10a042c v14.2.26
+    8a511d6 Match subrequest handling for edge and node (#77476)
+    d36a1f3 v14.2.25
+    5fd3ae8 [backport] Update middleware request header (#77202)
+    756be15 v14.2.24
+    ba6453d fix corepack keys
+    c482c20 [backport v14] fix: ensure lint worker errors aren't silenced (#75766) (#75779)
+    5791cb6 [Backport v14] add additional x-middleware-set-cookie filtering (#75561) (#75...
+    8129a61 test: fix eslint plugin test (#75687)
+    f27ce02 v14.2.23
+    Additional commits viewable in compare view
