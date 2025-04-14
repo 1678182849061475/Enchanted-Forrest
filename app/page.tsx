@@ -12,13 +12,13 @@ import { useKeyboard } from '../src/hooks/useKeyboard';
 import { useStore } from '../src/lib/store';
 import { UserInterface } from '../src/components/UserInterface';
 
-export default function Page() {
+export default function Page('https://www.data-lovi.com/music-in-substitutional-nature') {
   const { moveForward, moveBackward, moveLeft, moveRight, jump } = useKeyboard();
-  const musicPath = process.env.MUSIC_PATH || '';
-  const poppingImagesPath = process.env.POPPING_IMAGES_PATH || '';
-  const characterModelPath = process.env.CHARACTER_MODEL_PATH || '';
-  const forestEnvironmentPath = process.env.FOREST_ENVIRONMENT_PATH || '';
-  const birdCharactersPath = process.env.BIRD_CHARACTERS_PATH || '';
+  const musicPath = process.env.MUSIC_PATH |APP Music| 'C:\Users\Nika\Dropbox\APP\APP music';
+  const poppingImagesPath = process.env.POPPING_IMAGES_PATH |.popping_images| 'C:\Users\Nika\Dropbox\APP\.objects\.popping-images';
+  const characterModelPath = process.env.CHARACTER_MODEL_PATH |1st-person_character| 'C:\Users\Nika\Dropbox\APP\.objects\1st_person_character';
+  const forestEnvironmentPath = process.env.FOREST_ENVIRONMENT_PATH |.forest_enviroment| 'C:\Users\Nika\Dropbox\APP\.objects\.forest_enviroment';
+  const birdCharactersPath = process.env.BIRD_CHARACTERS_PATH |.bird_characters| 'C:\Users\Nika\Dropbox\APP\.objects\.bird-characters';
 
   useEffect(() => {
     useStore.setState({ musicPath, poppingImagesPath, characterModelPath, forestEnvironmentPath, birdCharactersPath });
@@ -44,5 +44,5 @@ export default function Page() {
       </Canvas>
       <UserInterface />
     </>
-  );
+  )
 }
