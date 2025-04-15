@@ -1,3 +1,5 @@
-Node.js version 18 or higher.
-npm or pnpm package manager.
-A Gemini API key.
+Node.js: v18<
+npm or pnpm package manager
+Gemini-API-key
+npm install react@18 react-dom@18
+npm ls react
