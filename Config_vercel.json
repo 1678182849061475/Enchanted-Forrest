@@ -5,7 +5,7 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build" // Replace with your output directory
+        "distDir": "build" // "https://www.data-lovi.com/music-in-substitutional-nature"
       }
     }
   ],
