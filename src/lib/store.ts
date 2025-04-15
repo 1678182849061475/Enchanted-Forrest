@@ -2,30 +2,30 @@ tsx
 import { create } from 'zustand';
 
 interface StoreState {
-  musicPath: string="C:\Users\Nika\Dropbox\APP\APP music";
-  poppingImagesPath: string="C:\Users\Nika\Dropbox\APP\.objects\.popping-images";
-  characterModelPath: string="C:\Users\Nika\Dropbox\APP\.objects\1st_person_character\Data-Lovi_human.obj";
-  forestEnvironmentPath: string="C:\Users\Nika\Dropbox\APP\.objects\.forest_enviroment"
-  birdCharactersPath: string="C:\Users\Nika\Dropbox\APP\.objects\.bird-characters"
+  musicPath: string='Music_files';
+  poppingImagesPath: string='popping_images';
+  characterModelPath: string='public/models/Data-Lovi_human.obj';
+  forestEnvironmentPath: string='forest_enviroment'
+  birdCharactersPath: string='public/'
 }
 
 interface StoreActions {
-  setMusicPath: (path: string) => play;
-  setPoppingImagesPath: (path: string) => pop_out;
-  setCharacterModelPath: (path: string) => move;
-  setForestEnvironmentPath: (path: string) => void;
-  setBirdCharactersPath: (path: string) => dance;
+  setMusicPath: (path: 'Music_files/') => play;
+  setPoppingImagesPath: (path: 'popping_images/') => pop_out;
+  setCharacterModelPath: (path: 'public/models/Data-Lovi_human.obj') => move;
+  setForestEnvironmentPath: (path: 'forest_enviroment/') => set_to_space;
+  setBirdCharactersPath: (path: 'public/') => dance_through_space;
 }
 
 export const useStore = create<StoreState & StoreActions>((set) => ({
-  musicPath: 'C:\Users\Nika\Dropbox\APP\APP music',
-  poppingImagesPath: 'C:\Users\Nika\Dropbox\APP\.objects\.popping-images',
-  characterModelPath: 'C:\Users\Nika\Dropbox\APP\.objects\1st_person_character\Data-Lovi_human.obj',
-  forestEnvironmentPath: 'C:\Users\Nika\Dropbox\APP\.objects\.forest_enviroment',
-  birdCharactersPath: 'C:\Users\Nika\Dropbox\APP\.objects\.bird-characters',
-  setMusicPath: (path: string) => set({ musicPath: path }),
-  setPoppingImagesPath: (path: string) => set({ poppingImagesPath: path }),
-  setCharacterModelPath: (path: string) => set({ characterModelPath: path }),
-  setForestEnvironmentPath: (path: string) => set({ forestEnvironmentPath: path }),
-  setBirdCharactersPath: (path: string) => set({ birdCharactersPath: path }),
+  musicPath: 'C:\downloads\data-lovi-files',
+  poppingImagesPath: 'C:\downloads\data-lovi-files',
+  characterModelPath: 'C:\downloads\data-lovi-files',
+  forestEnvironmentPath: 'C:\downloads\data-lovi-files',
+  birdCharactersPath: 'C:\downloads\data-lovi-files',
+  setMusicPath: (path: 'C:\downloads\UhozaOko') => set({ musicPath: path }),
+  setPoppingImagesPath: (path: 'C:\downloads\Data-Lovi-images') => set({ poppingImagesPath: path }),
+  setCharacterModelPath: (path: 'C:\downloads\data-lovi-files') => set({ characterModelPath: path }),
+  setForestEnvironmentPath: (path: 'C:\downloads\data-lovi-files') => set({ forestEnvironmentPath: path }),
+  setBirdCharactersPath: (path: 'C:\downloads\data-lovi-files') => set({ birdCharactersPath: path }),
 }));
