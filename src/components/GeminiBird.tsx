@@ -6,9 +6,9 @@ import { Gemini } from '@/lib/gemini';
 import { useStore } from '@/lib/store';
 
 const birdData = [
-  { id: 'bird1', position: [5, 8, -5], model: '/objects/.bird-characters/bird1.glb' },
-  { id: 'bird2', position: [-10, 6, 2], model: '/objects/.bird-characters/bird2.glb' },
-  { id: 'bird3', position: [3, 4, 12], model: '/objects/.bird-characters/bird3.glb' },
+  { id: 'bird1', position: [5, 8, -5], model: 'Enchanted-Forest/public/bird.OBJ' },
+  { id: 'bird2', position: [-10, 6, 2], model: '/public/Duck_obj.rar' },
+  { id: 'bird3', position: [3, 4, 12], model: 'public/passarinho_gigante_mascarado.obj' },
 ];
 
 export const GeminiBird = () => {
