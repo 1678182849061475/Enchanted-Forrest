@@ -1,0 +1,10 @@
+# .github/dependabot.yml
+version: 2
+updates:
+  - package-ecosystem: "npm" # or "pnpm" depending on your package manager
+    directory: "/" # Location of package files
+    schedule:
+      interval: "weekly" # Options: daily, weekly, monthly
+    ignore:
+      - dependency-name: "some-library" # Add dependencies to ignore
+        versions: ["<2.0.0"] # Ignore specific versions
