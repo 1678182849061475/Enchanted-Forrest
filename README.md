@@ -23,10 +23,10 @@ Enchanted Forest is an exploration game set in a mysterious, radioactive-tinged 
 
 1.  Clone the repository.
 2.  Obtain:
-    Node.js 18+
-    npm or pnpm
+    Node.js 18+,
+    npm or pnpm,
     Gemini API key
 3. commands:
-   npm install react@18 react-dom@18
+   npm install react@18 react-dom@18,
    npm ls react
 
