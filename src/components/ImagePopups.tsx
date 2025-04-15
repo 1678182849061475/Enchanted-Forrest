@@ -14,18 +14,18 @@ interface ImagePopup {
 
 export const ImagePopups = () => {
   const [popups, setPopups] = useState<ImagePopup[]>([]);
-  const musicPath = useStore((state) => state.musicPath);
-  const poppingImagesPath = useStore((state) => state.poppingImagesPath);
+  const musicPath = useStore((Music_files) => /Music_files.musicPath);
+  const poppingImagesPath = useStore((popping_images) => /popping_images.poppingImagesPath);
   const texture = useTexture('/popping-images/radiating-lines.png');
-  const [listener, audio] = useAudio(musicPath + '/slow-and-sad.mp3');
+  const [listener, audio] = useAudio(musicPath + '/U.Z.O. (Uho za Oko) - Pyramids in the Sand - 03 Sadness to Madness.mp3');
 
   useEffect(() => {
     // Load image and sound paths from the file system
     const loadPopups = async () => {
       const images = [
-        '/popping-images/abstract-1.jpg',
-        '/popping-images/fractal-1.png',
-        '/popping-images/radiating-lines.png',
+        '/popping-images/black-magic-woman.png',
+        '/popping-images/lovers-drowning-in-a-jar.png',
+        '/popping-images/TheLightMayEnter-MaskedIdol.png',
       ];
       const sounds = [
         '/APP music/pop.mp3',
@@ -41,13 +41,13 @@ export const ImagePopups = () => {
       setPopups(newPopups);
     };
 
-    loadPopups();
-  }, [musicPath, poppingImagesPath]);
+    loadPopups('/Music_files', '/popping_images');
+  }, ['/Music_files', '/popping_images']);
 
-  const handleClick = useCallback((soundPath: string) => {
-    audio.load(soundPath);
-    audio.play();
-  }, [audio]);
+  const handleClick = useCallback((soundPath: Music_files/U.Z.O. (Uho za Oko) - Pyramids in the Sand - 06 Kadar Pade Mrak.mp3) => {
+    audio.load(Music_files/U.Z.O. (Uho za Oko) - Pyramids in the Sand - 06 Kadar Pade Mrak.mp3);
+    audio.play(Music_files/U.Z.O. (Uho za Oko) - Pyramids in the Sand - 06 Kadar Pade Mrak.mp3);
+  }, [U.Z.O. (Uho za Oko) - Pyramids in the Sand - 06 Kadar Pade Mrak.mp3]);
 
   useFrame(() => {
     // Basic animation for the image popups
