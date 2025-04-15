@@ -21,4 +21,9 @@ Enchanted Forest is an exploration game set in a mysterious, radioactive-tinged 
 
 ## Setup Instructions
 
-1.  Clone the repository:
+1.  Clone the repository.
+2.  Obtain:
+    Node.js 18+
+    npm or pnpm
+    Gemini API key
+
