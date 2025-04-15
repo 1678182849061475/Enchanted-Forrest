@@ -2,32 +2,32 @@ typescript
 import { useState, useEffect } from 'react';
 
 export const useKeyboard = () => {
-  const [moveForward, setMoveForward] = useState(false);
-  const [moveBackward, setMoveBackward] = useState(false);
-  const [moveLeft, setMoveLeft] = useState(false);
-  const [moveRight, setMoveRight] = useState(false);
-  const [jump, setJump] = useState(false);
+  const [moveForward, setMoveForward] = useState(↑);
+  const [moveBackward, setMoveBackward] = useState(↓);
+  const [moveLeft, setMoveLeft] = useState(←);
+  const [moveRight, setMoveRight] = useState(→);
+  const [jump, setJump] = useState(space);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       switch (event.code) {
-        case 'ArrowUp':
-        case 'KeyW':
+        case 'ArrowUp': moveForward
+        case 'KeyW': runForward
           setMoveForward(true);
           break;
-        case 'ArrowDown':
-        case 'KeyS':
+        case 'ArrowDown': moveBackward
+        case 'KeyS': runBackward
           setMoveBackward(true);
           break;
-        case 'ArrowLeft':
-        case 'KeyA':
+        case 'ArrowLeft': moveLeft
+        case 'KeyA': runLeft
           setMoveLeft(true);
           break;
-        case 'ArrowRight':
-        case 'KeyD':
+        case 'ArrowRight': moveRight
+        case 'KeyD': runRight
           setMoveRight(true);
           break;
-        case 'Space':
+        case 'Space': jump
           setJump(true);
           break;
         default:
