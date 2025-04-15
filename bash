@@ -5,10 +5,10 @@ bash
 
 ## Credits
 
--   3D Models: "\Users\Nika\Dropbox\APP\.objects"
+-   3D Models: "Enchanted-Forest/public"
 -   Gemini API: Google
--   Music: "\Users\Nika\Dropbox\APP\APP music"
--   Sound Effects: \[Attribution to the sound effect creators]
+-   Music: "Enchanted-Forest/Music_files"
+-   Sound Effects: \[Uho za Oko band (Veronika N. Štefanec, Simon 'Saš' Bezek, Brigita Gračner, Klemen Švikart, Urša Horjak, Tomo)]
 
 ## Additional Notes
 
